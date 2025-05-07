@@ -7,30 +7,56 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body,h1,h5 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/05/3-Chess-Board.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
+body, h1, h5 { font-family: "Raleway", sans-serif; }
+body, html { height: 100%; margin: 0; }
+
+.bgimg-container {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1; /* Ensure background is behind other content */
-  filter: blur(5px);
+  background-image: url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/05/3-Chess-Board.jpg');
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(8px);
 }
+
 .w3-display-container {
   position: relative;
-  z-index: 1; /* Ensure content stays on top */
+  z-index: 1;
 }
+
+.w3-display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.w3-display-topleft, .w3-display-bottomleft {
+  position: absolute;
+}
+
+.w3-display-topleft {
+  top: 10px;
+  left: 10px;
+}
+
+.w3-display-bottomleft {
+  bottom: 10px;
+  left: 10px;
+}
+
 </style>
 </head>
 <body>
 
-<div class="bgimg w3-display-container w3-text-white">
+<!-- Chessboard Background -->
+<div class="bgimg-container"></div>
+
+<div class="w3-display-container w3-text-white">
   <div class="w3-display-middle w3-jumbo">
     <p>logo</p>
   </div>
