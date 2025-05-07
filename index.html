@@ -1,120 +1,274 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SimpluxHub – Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--
+			All external references to HTML5 UP have been removed.
+			All CSS is inlined below.
+		-->
+		<style>
+			/* Reset and base styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html, body {
+				height: 100%;
+			}
+			body {
+				font-family: 'Roboto', sans-serif;
+				line-height: 1.6;
+				background: #111;
+				color: #fff;
+				overflow-x: hidden;
+			}
+			/* Background image with blur */
+			#bg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/05/3-Chess-Board.jpg') center center / cover no-repeat;
+				filter: blur(8px);
+				z-index: -1;
+			}
+			/* Wrapper for all content */
+			#wrapper {
+				position: relative;
+				min-height: 100vh;
+				z-index: 1;
+			}
+			/* Header */
+			header#header {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background: rgba(0, 0, 0, 0.8);
+				padding: 20px 30px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				z-index: 10;
+			}
+			header#header .logo {
+				font-size: 1.8em;
+				color: #90caf9;
+			}
+			header#header .content .inner h1 {
+				font-size: 2.2em;
+				margin-bottom: 10px;
+			}
+			header#header .content .inner p {
+				font-size: 1em;
+				color: #ccc;
+			}
+			/* Navigation */
+			header#header nav ul {
+				list-style: none;
+				display: flex;
+			}
+			header#header nav ul li {
+				margin-left: 20px;
+			}
+			header#header nav ul li a {
+				color: #ddd;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+			header#header nav ul li a:hover {
+				color: #fff;
+			}
+			/* Main Content */
+			#main {
+				padding: 120px 30px 60px; /* Top padding accounts for the fixed header */
+			}
+			article {
+				padding: 40px 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			article:last-of-type {
+				border-bottom: none;
+			}
+			article h2.major {
+				font-size: 2em;
+				color: #bb86fc;
+				margin-bottom: 20px;
+			}
+			article p {
+				font-size: 1em;
+				color: #ccc;
+				margin-bottom: 20px;
+			}
+			.article .image.main {
+				text-align: center;
+				margin: 20px 0;
+			}
+			.article .image.main img,
+			.image.main img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+			}
+			/* Contact Form */
+			form {
+				max-width: 600px;
+				margin: 0 auto;
+			}
+			form .fields {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			form .field {
+				width: 100%;
+			}
+			form .field.half {
+				flex: 1;
+			}
+			form label {
+				display: block;
+				margin-bottom: 5px;
+				font-weight: bold;
+			}
+			form input[type="text"],
+			form input[type="email"],
+			form textarea {
+				width: 100%;
+				padding: 10px;
+				border: none;
+				border-radius: 4px;
+				background: #222;
+				color: #fff;
+				font-size: 1em;
+			}
+			form input[type="submit"],
+			form input[type="reset"] {
+				padding: 10px 20px;
+				border: none;
+				border-radius: 4px;
+				background: #1976d2;
+				color: #fff;
+				cursor: pointer;
+				font-size: 1em;
+			}
+			form input[type="reset"] {
+				background: #555;
+			}
+			form .actions {
+				margin-top: 20px;
+				list-style: none;
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+			}
+			/* Footer */
+			footer#footer {
+				background: rgba(0, 0, 0, 0.8);
+				text-align: center;
+				padding: 20px 30px;
+				font-size: 0.9em;
+				color: #aaa;
+			}
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				header#header nav ul {
+					flex-direction: column;
+					margin-top: 10px;
+				}
+				header#header nav ul li {
+					margin: 10px 0;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Background -->
+		<div id="bg"></div>
 
-    .background {
-      background-image: url('https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/05/3-Chess-Board.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+		<!-- Wrapper -->
+		<div id="wrapper">
+			
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">SimpluxHub</div>
+				<div class="content">
+					<div class="inner">
+						<h1>SimpluxHub</h1>
+						<p>Your hub for innovative, cutting-edge tools.</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
 
-    .content {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 0 5px black;
-      font-size: 2em;
-    }
+			<!-- Main -->
+			<div id="main">
+				<!-- Intro Section -->
+				<article id="intro">
+					<h2 class="major">Intro</h2>
+					<span class="image main"><img src="images/pic01.jpg" alt="Intro Image" /></span>
+					<p>Welcome to SimpluxHub. Here you’ll find innovative solutions and tools designed to take your projects to the next level.</p>
+				</article>
 
-    .header {
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      margin-top: 50px;
-    }
+				<!-- Work Section -->
+				<article id="work">
+					<h2 class="major">Work</h2>
+					<span class="image main"><img src="images/pic02.jpg" alt="Work Image" /></span>
+					<p>Explore our portfolio and discover a range of projects that showcase our expertise and commitment to quality.</p>
+				</article>
 
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9em;
-      color: rgba(255, 255, 255, 0.7);
-    }
+				<!-- About Section -->
+				<article id="about">
+					<h2 class="major">About</h2>
+					<span class="image main"><img src="images/pic03.jpg" alt="About Image" /></span>
+					<p>SimpluxHub is dedicated to developing secure, high-performance tools. We strive for excellence in every project we undertake.</p>
+				</article>
 
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
+				<!-- Contact Section -->
+				<article id="contact">
+					<h2 class="major">Contact</h2>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="4"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
+				</article>
+			</div>
 
-    .button {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      border: none;
-      font-size: 1.2em;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+			<!-- Footer -->
+			<footer id="footer">
+				<p>&copy; 2025 SimpluxHub. All rights reserved.</p>
+			</footer>
+		</div>
 
-    .button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .links {
-      margin-top: 30px;
-    }
-
-    .links a {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1em;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .links a:hover {
-      color: rgba(255, 255, 255, 1);
-    }
-
-  </style>
-</head>
-<body>
-
-  <div class="background"></div>
-  
-  <div class="content">
-    <div>
-      <div class="header">Welcome to My Index Page</div>
-      <div class="button-container">
-        <button class="button">Start</button>
-        <button class="button">About</button>
-      </div>
-      <div class="links">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>© 2025 All Rights Reserved</p>
-  </div>
-
-</body>
+		<!-- Inline Scripts -->
+		<script>
+			// Placeholder for any future JavaScript
+		</script>
+	</body>
 </html>
