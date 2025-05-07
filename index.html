@@ -23,6 +23,16 @@ body, html { height: 100%; margin: 0; }
   filter: blur(8px);
 }
 
+.bgimg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  z-index: -1;
+}
+
 .w3-display-container {
   position: relative;
   z-index: 1;
@@ -55,6 +65,9 @@ body, html { height: 100%; margin: 0; }
 
 <!-- Chessboard Background -->
 <div class="bgimg-container"></div>
+
+<!-- Optional dark overlay on top of background -->
+<div class="bgimg-overlay"></div>
 
 <div class="w3-display-container w3-text-white">
   <div class="w3-display-middle w3-jumbo">
