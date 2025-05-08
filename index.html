@@ -1,139 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Modern Template</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpluxHub Script Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body, h1, h5 {
-            font-family: "Poppins", sans-serif;
-        }
-        body, html {
-            height: 100%;
+        /* General Styling */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .bgimg-container {
-            position: fixed;
+        body, html {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: white;
+            height: 100%;
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e1e1e;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://source.unsplash.com/random/1920x1080/?abstract,chess');
-            background-position: center;
-            background-size: cover;
-            z-index: -1;
+            z-index: 1000;
         }
 
-        .bgimg-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6); /* Darker overlay */
-            z-index: -1;
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
-        .w3-display-container {
-            position: relative;
-            z-index: 1;
+        header nav a {
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
         }
 
+        .container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Script Section */
         .script-section {
             margin: 30px auto;
             padding: 20px;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #1e1e1e;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color: white;
-            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            background: #333;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .tab:hover, .tab.active {
+            background: #4caf50;
         }
 
         .script-box {
-            background: #1e1e1e;
-            color: #fff;
-            padding: 15px;
+            background: #121212;
+            color: #4caf50;
+            padding: 20px;
+            border: 1px solid #333;
             border-radius: 5px;
             font-family: monospace;
             overflow-x: auto;
+            margin-bottom: 15px;
         }
 
         .copy-button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            padding: 10px 20px;
+            background: #4caf50;
             border: none;
             color: white;
             border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         .copy-button:hover {
-            background: linear-gradient(45deg, #2575fc, #6a11cb);
+            background: #45a045;
         }
 
-        .copy-success {
-            color: limegreen;
-            margin-top: 10px;
-            display: none;
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            background-color: #1e1e1e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer a {
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Chessboard Background -->
-    <div class="bgimg-container"></div>
+    <!-- Header -->
+    <header>
+        <div class="logo">SimpluxHub</div>
+        <nav>
+            <a href="#scripts">Scripts</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <!-- Optional dark overlay on top of background -->
-    <div class="bgimg-overlay"></div>
-
-    <div class="w3-display-container w3-text-white">
-        <div class="w3-display-middle">
-            <p class="w3-xxxlarge">My Awesome Logo</p>
-        </div>
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to SimpluxHub</h1>
+        <p>Your ultimate Roblox script hub for exploits and utilities.</p>
     </div>
 
-    <!-- Script Copy Section -->
-    <div class="script-section">
-        <h2>Copy Your Script</h2>
+    <!-- Script Section -->
+    <div class="script-section" id="scripts">
+        <div class="tabs">
+            <div class="tab active" onclick="showScript(1)">Script 1</div>
+            <div class="tab" onclick="showScript(2)">Script 2</div>
+            <div class="tab" onclick="showScript(3)">Script 3</div>
+        </div>
         <div class="script-box" id="script-box">
-            loadstring(game:HttpGet("https://example.com/script.lua"))()
+            loadstring(game:HttpGet("https://example.com/script1.lua"))()
         </div>
-        <button class="copy-button" onclick="copyScript()">Copy to Clipboard</button>
-        <p class="copy-success" id="copy-success">Script copied to clipboard!</p>
+        <button class="copy-button" onclick="copyScript()">Copy Script</button>
+        <p id="copy-success" style="display: none; color: limegreen; margin-top: 5px;">Script copied to clipboard!</p>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 SimpluxHub. All Rights Reserved.</p>
+        <a href="https://github.com/SimpluxHub" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+    </footer>
 
     <script>
-        function copyScript() {
-            // Get the script text
-            const scriptBox = document.getElementById("script-box");
-            const scriptText = scriptBox.innerText;
+        // Scripts Data
+        const scripts = [
+            'loadstring(game:HttpGet("https://example.com/script1.lua"))()',
+            'loadstring(game:HttpGet("https://example.com/script2.lua"))()',
+            'loadstring(game:HttpGet("https://example.com/script3.lua"))()'
+        ];
 
-            // Create a temporary element to hold the script text
-            const tempElement = document.createElement("textarea");
+        function showScript(index) {
+            // Update script box text
+            const scriptBox = document.getElementById('script-box');
+            scriptBox.textContent = scripts[index - 1];
+
+            // Update active tab
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === index - 1);
+            });
+        }
+
+        function copyScript() {
+            // Get script text
+            const scriptText = document.getElementById('script-box').textContent;
+
+            // Copy to clipboard
+            const tempElement = document.createElement('textarea');
             tempElement.value = scriptText;
             document.body.appendChild(tempElement);
-
-            // Select and copy the text
             tempElement.select();
-            document.execCommand("copy");
+            document.execCommand('copy');
             document.body.removeChild(tempElement);
 
             // Show success message
-            const successMessage = document.getElementById("copy-success");
-            successMessage.style.display = "block";
+            const successMessage = document.getElementById('copy-success');
+            successMessage.style.display = 'block';
             setTimeout(() => {
-                successMessage.style.display = "none";
+                successMessage.style.display = 'none';
             }, 2000);
         }
     </script>
-
 </body>
 </html>
